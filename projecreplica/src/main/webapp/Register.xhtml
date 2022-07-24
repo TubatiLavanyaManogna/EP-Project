@@ -1,0 +1,72 @@
+<html xmlns:s="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<link rel="stylesheet" type="text/css" href="login.css" media="all" />
+
+<title>Register Form</title>
+
+</head>
+<body >
+<div class="center">
+<h1 style = "font-size: 20pt; color: black">PLEASE ENTER YOUR DETAILS...!!!</h1>
+<br/> 
+<s:form>
+<div class="txt_field">
+ENTER YOUR NAME:
+<s:inputText value="#{reg.nm}" required = "true" />
+</div>
+
+<div class="txt_field">
+ENTER YOUR FATHERNAME:
+<s:inputText value="#{reg.fn}" required = "true" />
+</div>
+<div class="txt_field">
+ENTER YOUR MOTHERNAME:
+<s:inputText value="#{reg.mn}" required = "true" />
+</div>
+<div class="txt_field">
+ENTER YOUR DOB:
+<s:inputText value="#{reg.dob}" required = "true" />
+</div>
+
+
+
+<p style = "color: black">
+SELECT ROLE:
+<s:selectOneRadio value="#{reg.opt}" style = "color: black">
+   <f:selectItem itemValue="student" itemLabel="Student"  />
+   <f:selectItem itemValue="faculty" itemLabel="Faculty"  />         
+</s:selectOneRadio>
+</p>
+<br/>
+<div class="txt_field">
+ENTER YOUR PASSWORD:
+<s:inputSecret value="#{reg.pwd}" />
+</div>
+
+<div class="txt_field">
+ENTER YOUR GENDER :
+<s:inputText value="#{reg.gen}" required = "true" />
+</div>
+<div class="txt_field">
+ENTER YOUR SCHOOL NAME :
+<s:inputText value="#{reg.snm}" required = "true" />
+</div>
+<div class="txt_field">
+ENTER YOUR INTER NAME :
+<s:inputText value="#{reg.inm}" required = "true" />
+</div>
+
+<s:commandButton action="#{reg.insert()}" value="Register" onclick="alert('Registered Successfully..kindly proceed with login')"  />
+<br/>
+<br/>
+<div class="signup_link">
+<a href="index1.jsp" style="font-size: 20pt; color: black">Login here by going to home page...</a>
+</div>
+
+</s:form>
+
+</div>
+
+</body>
+</html>
